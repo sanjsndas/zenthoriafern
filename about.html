@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About · Zenthoria Fern World</title>
+  <!-- same earthy-premium palette, serif + sans -->
+  <style>
+    /* ----- reset & base (mirror homepage) ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f7f4ef;
+      font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+      color: #2e3b2a;
+      line-height: 1.7;
+      padding: 0 1.5rem;
+    }
+
+    h1, h2, h3, h4, .nav-links, .article-meta, .btn, .category-tag {
+      font-family: 'Jost', 'Helvetica Neue', sans-serif;
+      letter-spacing: 0.02em;
+      font-weight: 400;
+    }
+
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 1.2rem;
+    }
+
+    /* ----- header (exact same as index) ----- */
+    .site-header {
+      padding: 2.2rem 0 1.8rem;
+      border-bottom: 2px solid #d8d0c0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .brand-icon {
+      font-size: 2.4rem;
+      line-height: 1;
+      color: #4d6b4a;
+    }
+
+    .brand h1 {
+      font-size: 1.9rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      color: #2c4628;
+      text-transform: uppercase;
+      border-left: 3px solid #b7a98b;
+      padding-left: 1rem;
+    }
+
+    .brand h1 span {
+      font-weight: 300;
+      color: #6f7e5e;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #3d4d37;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 0.2rem;
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      border-bottom-color: #6f8c5d;
+      color: #1f2e1c;
+    }
+
+    /* ----- about hero (storytelling) ----- */
+    .about-hero {
+      display: grid;
+      grid-template-columns: 1.2fr 0.9fr;
+      gap: 2.8rem;
+      align-items: center;
+      margin: 3.2rem 0 3rem;
+      padding: 1.8rem 0 2.4rem;
+      border-bottom: 1px solid #ded6c6;
+    }
+
+    .about-text h2 {
+      font-size: 2.8rem;
+      font-weight: 300;
+      letter-spacing: -0.01em;
+      color: #263f22;
+      line-height: 1.2;
+      margin-bottom: 1.4rem;
+    }
+
+    .about-text h2 strong {
+      font-weight: 500;
+      background: linear-gradient(145deg, #3f603a, #5b7b4e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .about-text p {
+      font-size: 1.2rem;
+      color: #3c4b38;
+      max-width: 95%;
+      margin-bottom: 1.2rem;
+      font-weight: 300;
+      letter-spacing: 0.01em;
+    }
+
+    .about-image {
+      background: #d4cdbb;
+      height: 220px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240"><rect width="400" height="240" fill="%23d4cdbb"/><path d="M30 200 L120 70 L190 140 L260 50 L330 120 L380 180 L350 200 L280 150 L210 190 L140 110 L70 180 L30 200" fill="%236f8c5d" opacity="0.3"/><circle cx="180" cy="80" r="28" fill="%234d6b4a" opacity="0.25"/><path d="M50 190 L120 140 L190 180 L260 130 L340 170 L380 190 L320 200 L240 170 L160 200 L80 180 L50 190" fill="%23a5b892" opacity="0.25"/><text x="100" y="160" font-family="serif" font-size="28" fill="%232e3b2a" opacity="0.5">🌿</text></svg>');
+      background-size: cover;
+      background-position: center;
+      border-radius: 120px 20px 120px 20px;
+      box-shadow: 0 12px 30px rgba(50, 60, 40, 0.08);
+      min-height: 200px;
+    }
+
+    /* mission cards */
+    .mission-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin: 2.5rem 0 3rem;
+    }
+
+    .mission-card {
+      background: #fcfaf7;
+      padding: 1.8rem 1.5rem 2rem;
+      border-radius: 8px 40px 8px 40px;
+      border: 1px solid #ece5d9;
+      box-shadow: 0 6px 18px rgba(70, 80, 50, 0.04);
+      transition: 0.2s;
+    }
+
+    .mission-card:hover {
+      transform: translateY(-4px);
+      border-color: #b9ad96;
+      box-shadow: 0 14px 30px rgba(60, 75, 45, 0.06);
+    }
+
+    .mission-card h3 {
+      font-size: 1.6rem;
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+      color: #1d321a;
+    }
+
+    .mission-card p {
+      color: #4f5f49;
+      font-size: 1rem;
+    }
+
+    /* timeline / story */
+    .story-section {
+      background: #f4f0e9;
+      padding: 2.2rem 2.5rem;
+      border-radius: 80px 20px 80px 20px;
+      margin: 2.2rem 0 2.8rem;
+    }
+
+    .story-section h2 {
+      font-size: 2rem;
+      font-weight: 300;
+      border-left: 6px solid #809b6e;
+      padding-left: 1.2rem;
+      margin-bottom: 1.8rem;
+      color: #2f462a;
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.8rem 3rem;
+    }
+
+    .story-item {
+      border-bottom: 1px dashed #cdc2ae;
+      padding-bottom: 1rem;
+    }
+
+    .story-item strong {
+      display: block;
+      font-weight: 500;
+      font-size: 1.2rem;
+      color: #324d2d;
+    }
+
+    .story-item p {
+      color: #4b5d44;
+      font-size: 0.98rem;
+      margin-top: 0.2rem;
+    }
+
+    /* team (minimal) */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.8rem;
+      margin: 1.8rem 0 2.5rem;
+    }
+
+    .team-card {
+      background: #fcfaf7;
+      padding: 1.2rem 1rem;
+      border-radius: 40px 8px 40px 8px;
+      border: 1px solid #dfd7c7;
+      text-align: center;
+    }
+
+    .team-card .emoji-big {
+      font-size: 2.8rem;
+      line-height: 1;
+    }
+
+    .team-card h4 {
+      font-weight: 400;
+      font-size: 1.2rem;
+      margin: 0.3rem 0 0.1rem;
+      color: #1d321a;
+    }
+
+    .team-card span {
+      color: #6a7d5f;
+      font-size: 0.9rem;
+    }
+
+    /* newsletter & footer (same) */
+    .newsletter {
+      background: #e2dacb;
+      padding: 2.8rem 2.5rem;
+      border-radius: 40px 8px 40px 8px;
+      margin: 3.4rem 0 2rem;
+      text-align: center;
+    }
+
+    .newsletter h3 {
+      font-size: 2rem;
+      font-weight: 300;
+      letter-spacing: 0.04em;
+      color: #1e321b;
+    }
+
+    .newsletter input {
+      background: #fcfaf7;
+      border: 1px solid #b8ab94;
+      padding: 0.8rem 1.6rem;
+      width: 280px;
+      border-radius: 60px;
+      font-size: 1rem;
+      margin: 0.8rem 0.5rem 0 0;
+    }
+
+    .newsletter button {
+      background: #3f5e39;
+      border: none;
+      padding: 0.8rem 2rem;
+      border-radius: 60px;
+      color: #f4f0e7;
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .newsletter button:hover {
+      background: #1f3a1b;
+    }
+
+    footer {
+      border-top: 2px solid #d8d0c0;
+      padding: 2rem 0 1.5rem;
+      margin-top: 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      color: #4d5f45;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 300;
+      letter-spacing: 0.03em;
+      border-left: 6px solid #809b6e;
+      padding-left: 1.2rem;
+      margin: 2.8rem 0 1.8rem;
+      color: #2f462a;
+    }
+
+    @media (max-width: 780px) {
+      .about-hero { grid-template-columns: 1fr; }
+      .mission-grid { grid-template-columns: 1fr; }
+      .story-grid { grid-template-columns: 1fr; }
+      .nav-links { gap: 1.2rem; flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- header (exact replica) -->
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-icon">🌿</span>
+      <h1>Zenthoria<span>Fern World</span></h1>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html" style="border-bottom-color: #6f8c5d;">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="terms.html">Terms Of Privacy</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="cookies.html">Cookies Policy</a>
+    </div>
+  </header>
+
+  <!-- about hero -->
+  <section class="about-hero">
+    <div class="about-text">
+      <h2>Rooted in <strong>centuries</strong>, growing toward tomorrow</h2>
+      <p>Zenthoria was founded in 2018 by a collective of botanists, horticulturists, and fern enthusiasts who saw the need for a trusted, ad-free resource dedicated entirely to the world of ferns. From the misty cloud forests of the tropics to the temperate woodlands, we document, cultivate, and share.</p>
+      <p>We believe that ferns are not just plants — they are living fossils, design icons, and teachers of patience. Our mission is to bridge ancient wisdom with modern horticultural science.</p>
+    </div>
+    <div class="about-image" aria-label="fern illustration"></div>
+  </section>
+
+  <!-- mission cards -->
+  <div class="mission-grid">
+    <div class="mission-card">
+      <h3>📘 Education</h3>
+      <p>We produce in-depth guides, video tutorials, and printable checklists — all peer-reviewed by our network of expert growers.</p>
+    </div>
+    <div class="mission-card">
+      <h3>🌱 Conservation</h3>
+      <p>Through partnerships with botanical gardens, we support fern conservation projects and rare species propagation programs.</p>
+    </div>
+    <div class="mission-card">
+      <h3>🧪 Innovation</h3>
+      <p>From spore culture to hybrid development, we experiment with new techniques and share our findings openly with the community.</p>
+    </div>
+  </div>
+
+  <!-- story timeline -->
+  <div class="story-section">
+    <h2>Our Story · Milestones</h2>
+    <div class="story-grid">
+      <div class="story-item"><strong>2018 · The Beginning</strong><p>Zenthoria launched as a small blog focused on native fern ecology in the Pacific Northwest.</p></div>
+      <div class="story-item"><strong>2019 · Spore Lab</strong><p>We built our first sterile propagation lab, successfully germinating over 40 species from spore.</p></div>
+      <div class="story-item"><strong>2021 · Field Expeditions</strong><p>Our team travelled to Costa Rica, New Zealand, and Japan to document wild fern habitats and cultivation traditions.</p></div>
+      <div class="story-item"><strong>2023 · Digital Herbarium</strong><p>Launched the Zenthoria Digital Herbarium — an open-access database with 1,200+ fern species profiles.</p></div>
+      <div class="story-item"><strong>2025 · Global Community</strong><p>Our readership surpassed 200,000 monthly visitors, with contributors from 60+ countries.</p></div>
+      <div class="story-item"><strong>2026 · The Fern Authority</strong><p>Today, Zenthoria is recognized as a leading independent resource for fern horticulture and conservation.</p></div>
+    </div>
+  </div>
+
+  <!-- team (mini) -->
+  <h2 class="section-title">The People Behind the Fronds</h2>
+  <div class="team-grid">
+    <div class="team-card"><div class="emoji-big">🌿</div><h4>Dr. Elara Moss</h4><span>Botanist, co-founder</span></div>
+    <div class="team-card"><div class="emoji-big">🍃</div><h4>Jonah Birch</h4><span>Horticulturist, propagator</span></div>
+    <div class="team-card"><div class="emoji-big">🌱</div><h4>Mira Farrow</h4><span>Ecology writer, field researcher</span></div>
+    <div class="team-card"><div class="emoji-big">📚</div><h4>Leo Thorne</h4><span>Digital herbarium curator</span></div>
+  </div>
+
+  <!-- newsletter (identical) -->
+  <div class="newsletter">
+    <h3>🌿 The Frond Letter</h3>
+    <p style="max-width: 500px; margin: 0.5rem auto 1rem; color: #3c5036;">Weekly insights, rare species spotlights, and advanced cultivation techniques.</p>
+    <form><input type="email" placeholder="your@email.com" aria-label="email"><button>Subscribe</button></form>
+  </div>
+
+  <!-- footer -->
+  <footer>
+    <span>© Zenthoria Fern World · established 2018</span>
+    <span style="letter-spacing: 0.1em;">🌿 authority in fern horticulture</span>
+  </footer>
+
+</div>
+</body>
+</html>

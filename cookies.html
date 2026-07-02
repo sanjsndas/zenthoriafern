@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookies · Zenthoria Fern World</title>
+  <!-- earthy-premium palette: deep olive, clay, fern green, warm sand -->
+  <style>
+    /* ----- reset & base (same as privacy) ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f7f4ef;  /* warm limestone */
+      font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+      color: #2e3b2a;
+      line-height: 1.7;
+      padding: 0 1.5rem;
+    }
+
+    h1, h2, h3, h4, .nav-links, .article-meta, .btn, .category-tag {
+      font-family: 'Jost', 'Helvetica Neue', sans-serif;
+      letter-spacing: 0.02em;
+      font-weight: 400;
+    }
+
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 1.2rem;
+    }
+
+    /* ----- brand & header (unique spacing) ----- */
+    .site-header {
+      padding: 2.2rem 0 1.8rem;
+      border-bottom: 2px solid #d8d0c0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .brand-icon {
+      font-size: 2.4rem;
+      line-height: 1;
+      color: #4d6b4a;
+    }
+
+    .brand h1 {
+      font-size: 1.9rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      color: #2c4628;
+      text-transform: uppercase;
+      border-left: 3px solid #b7a98b;
+      padding-left: 1rem;
+    }
+
+    .brand h1 span {
+      font-weight: 300;
+      color: #6f7e5e;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #3d4d37;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 0.2rem;
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      border-bottom-color: #6f8c5d;
+      color: #1f2e1c;
+    }
+
+    /* ----- page hero (minimal) ----- */
+    .page-hero {
+      margin: 2.8rem 0 2rem;
+      padding-bottom: 1.8rem;
+      border-bottom: 1px solid #ded6c6;
+    }
+
+    .page-hero h2 {
+      font-size: 2.8rem;
+      font-weight: 300;
+      letter-spacing: -0.01em;
+      color: #263f22;
+      line-height: 1.2;
+      margin-bottom: 0.6rem;
+    }
+
+    .page-hero h2 strong {
+      font-weight: 500;
+      background: linear-gradient(145deg, #3f603a, #5b7b4e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .page-hero p {
+      font-size: 1.2rem;
+      color: #3c4b38;
+      max-width: 70%;
+      font-weight: 300;
+    }
+
+    /* ----- cookies card (matches privacy) ----- */
+    .cookies-card {
+      background: #fcfaf7;
+      padding: 2.5rem 3rem;
+      border-radius: 24px 60px 24px 60px;
+      border: 1px solid #ece5d9;
+      box-shadow: 0 6px 18px rgba(70, 80, 50, 0.04);
+      margin: 1.5rem 0 2.5rem;
+    }
+
+    .cookies-card h3 {
+      font-size: 1.8rem;
+      font-weight: 300;
+      color: #1d321a;
+      border-left: 6px solid #809b6e;
+      padding-left: 1.2rem;
+      margin: 2rem 0 1rem;
+    }
+
+    .cookies-card h3:first-of-type {
+      margin-top: 0.2rem;
+    }
+
+    .cookies-card p {
+      margin-bottom: 1.2rem;
+      color: #2f402b;
+    }
+
+    .cookies-card ul {
+      margin: 0.8rem 0 1.8rem 1.8rem;
+      list-style: none;
+    }
+
+    .cookies-card ul li {
+      margin-bottom: 0.6rem;
+      padding-left: 1.8rem;
+      position: relative;
+    }
+
+    .cookies-card ul li::before {
+      content: "🌿";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #4d6b4a;
+      font-size: 1.1rem;
+    }
+
+    .cookies-card .highlight-box {
+      background: #ede8dd;
+      padding: 1.4rem 2rem;
+      border-radius: 60px 8px 60px 8px;
+      border-left: 6px solid #6f8c5d;
+      margin: 1.8rem 0;
+      font-style: italic;
+      color: #1f321c;
+    }
+
+    .cookies-card .highlight-box strong {
+      font-style: normal;
+      font-weight: 500;
+      color: #1d321a;
+    }
+
+    .fern-divider {
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 20" width="400" height="20"><path d="M20 10 L60 4 L100 10 L140 4 L180 10 L220 4 L260 10 L300 4 L340 10 L380 4 L400 10" stroke="%236f8c5d" stroke-width="1.5" fill="none" opacity="0.3"/></svg>');
+      background-repeat: repeat-x;
+      height: 20px;
+      margin: 1.2rem 0;
+      opacity: 0.5;
+    }
+
+    .small-note {
+      font-size: 0.95rem;
+      color: #4d6046;
+      background: #f4f0e9;
+      padding: 0.8rem 1.8rem;
+      border-radius: 60px;
+      display: inline-block;
+      margin-top: 0.6rem;
+    }
+
+    /* cookie preference button (soft) */
+    .cookie-pref-btn {
+      background: #e2dacb;
+      border: none;
+      padding: 0.6rem 1.8rem;
+      border-radius: 60px;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      color: #1f2e1c;
+      cursor: pointer;
+      transition: 0.2s;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+      border: 1px solid #cec3ae;
+    }
+
+    .cookie-pref-btn:hover {
+      background: #cdc0ab;
+      border-color: #9b8b72;
+    }
+
+    footer {
+      border-top: 2px solid #d8d0c0;
+      padding: 2rem 0 1.5rem;
+      margin-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      color: #4d5f45;
+    }
+
+    @media (max-width: 780px) {
+      .page-hero p { max-width: 100%; }
+      .nav-links { gap: 1.2rem; flex-wrap: wrap; }
+      .cookies-card { padding: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- header (identical to privacy page) -->
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-icon">🌿</span>
+      <h1>Zenthoria<span>Fern World</span></h1>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="terms.html">Terms Of Privacy</a></li>
+      <li><a href="privacy.html" style="border-bottom-color: #6f8c5d; color: #1f2e1c;">Privacy Policy</a></li>
+      <li><a href="cookies.html" style="border-bottom-color: #6f8c5d; color: #1f2e1c;">Cookies Policy</a></li>
+    </ul>
+  </header>
+
+  <!-- page title -->
+  <section class="page-hero">
+    <h2>Our <strong>cookies</strong> & your choice</h2>
+    <p>We use cookies to nurture your browsing experience — just enough to keep things fresh, never overbearing. Learn how we use them and how you can manage your preferences.</p>
+  </section>
+
+  <!-- cookies content -->
+  <div class="cookies-card">
+    <h3>🍪 What are cookies?</h3>
+    <p>Cookies are small text files placed on your device when you visit a website. They help us remember your preferences, understand how you interact with our content, and improve your overall experience. At Zenthoria Fern World, we use cookies minimally and transparently.</p>
+
+    <div class="fern-divider"></div>
+
+    <h3>🌿 How we use cookies</h3>
+    <ul>
+      <li><strong>Essential cookies:</strong> These are necessary for the site to function — for example, to keep you logged in or remember your cookie consent.</li>
+      <li><strong>Preference cookies:</strong> We use a small number of cookies to remember your settings, such as language or region, so you don’t have to set them every time.</li>
+      <li><strong>Analytics cookies:</strong> We use lightweight analytics (like page views) to understand which fern articles are most popular, helping us create better content. All data is anonymised.</li>
+    </ul>
+    <p>We do <strong>not</strong> use advertising or tracking cookies from third parties. No retargeting, no behavioral ads — just a quiet, respectful digital garden.</p>
+
+    <div class="highlight-box">
+      <strong>🌱 Your choice matters</strong> — You can control or delete cookies at any time through your browser settings. Blocking cookies may affect some functionality, but our core content will always remain accessible.
+    </div>
+
+    <h3>📋 Manage your preferences</h3>
+    <p>We believe in giving you control. Below you can adjust your cookie preferences for this site. Your choice will be stored for 30 days.</p>
+
+    <!-- interactive cookie preference (visual only – demonstration) -->
+    <div style="display: flex; flex-wrap: wrap; gap: 1.2rem; margin: 1.2rem 0 1.8rem; align-items: center; background: #f4f0e9; padding: 1.2rem 2rem; border-radius: 80px 12px 80px 12px;">
+      <span style="font-family: 'Jost', sans-serif; font-weight: 300; letter-spacing: 0.02em; color: #1d321a;">🍪 Cookie settings:</span>
+      <button class="cookie-pref-btn" onclick="alert('🍃 All cookies accepted — your preferences are saved.')">Accept all</button>
+      <button class="cookie-pref-btn" onclick="alert('🌿 Essential & preference cookies only. Analytics declined.')">Essential + preferences</button>
+      <button class="cookie-pref-btn" onclick="alert('🧺 All cookies declined. Some features may be limited.')">Decline non-essential</button>
+      <span style="font-size: 0.8rem; color: #4d6046; font-family: 'Jost', sans-serif; margin-left: auto;">Your choice is stored locally.</span>
+    </div>
+
+    <h3>📌 Third-party cookies</h3>
+    <p>We do not integrate with third-party ad networks or social media tracking. The only external services we use are for secure payment processing (if applicable) and occasional embedded educational videos — these may set their own cookies, but we have no control over them. We recommend reviewing their policies separately.</p>
+
+    <div class="fern-divider"></div>
+
+    <h3>🔄 Updates to this policy</h3>
+    <p>We may update this Cookies Policy to reflect changes in technology or legal requirements. Any changes will be posted here with a revised date. We encourage you to check back occasionally — but rest assured, we will never change our approach to respecting your privacy.</p>
+
+    <p><em>Last updated: July 1, 2026</em></p>
+
+    <div class="small-note">
+      🌱 Like a fern in the forest, we keep things natural — no hidden tracking, just honest care.
+    </div>
+  </div>
+
+  <!-- extra trust signal (consistent with privacy page) -->
+  <div style="background: #f4f0e9; padding: 1.5rem 2rem; border-radius: 80px 8px 80px 8px; margin: 0.5rem 0 2rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
+    <span style="font-size: 1.1rem; color: #2c4027;">🌿 <strong>Questions about cookies?</strong> Reach out — we’re happy to clarify. <a href="contact.html" style="color: #2f462a; border-bottom: 1px solid #b7ab92; text-decoration: none;">Contact us</a></span>
+    <span style="font-family: 'Jost', sans-serif; letter-spacing: 0.04em; background: #ded6c6; padding: 0.3rem 1.4rem; border-radius: 60px; font-size: 0.9rem;">transparent since day one</span>
+  </div>
+
+  <!-- footer -->
+  <footer>
+    <span>© Zenthoria Fern World · established 2018</span>
+    <span style="letter-spacing: 0.1em;">🌿 authority in fern horticulture</span>
+  </footer>
+
+</div>
+<!-- all content is meaningful, decorative dividers only -->
+</body>
+</html>

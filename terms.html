@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service · Zenthoria Fern World</title>
+  <!-- same earthy-premium palette, serif + sans -->
+  <style>
+    /* ----- reset & base (mirror homepage) ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f7f4ef;
+      font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+      color: #2e3b2a;
+      line-height: 1.7;
+      padding: 0 1.5rem;
+    }
+
+    h1, h2, h3, h4, .nav-links, .article-meta, .btn, .category-tag {
+      font-family: 'Jost', 'Helvetica Neue', sans-serif;
+      letter-spacing: 0.02em;
+      font-weight: 400;
+    }
+
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 1.2rem;
+    }
+
+    /* ----- header (exact same as index) ----- */
+    .site-header {
+      padding: 2.2rem 0 1.8rem;
+      border-bottom: 2px solid #d8d0c0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .brand-icon {
+      font-size: 2.4rem;
+      line-height: 1;
+      color: #4d6b4a;
+    }
+
+    .brand h1 {
+      font-size: 1.9rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      color: #2c4628;
+      text-transform: uppercase;
+      border-left: 3px solid #b7a98b;
+      padding-left: 1rem;
+    }
+
+    .brand h1 span {
+      font-weight: 300;
+      color: #6f7e5e;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #3d4d37;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 0.2rem;
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      border-bottom-color: #6f8c5d;
+      color: #1f2e1c;
+    }
+
+    /* ----- terms hero (storytelling) ----- */
+    .terms-hero {
+      display: grid;
+      grid-template-columns: 1.2fr 0.9fr;
+      gap: 2.8rem;
+      align-items: center;
+      margin: 3.2rem 0 2.2rem;
+      padding: 1.8rem 0 2rem;
+      border-bottom: 1px solid #ded6c6;
+    }
+
+    .terms-text h2 {
+      font-size: 2.8rem;
+      font-weight: 300;
+      letter-spacing: -0.01em;
+      color: #263f22;
+      line-height: 1.2;
+      margin-bottom: 1.4rem;
+    }
+
+    .terms-text h2 strong {
+      font-weight: 500;
+      background: linear-gradient(145deg, #3f603a, #5b7b4e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .terms-text p {
+      font-size: 1.2rem;
+      color: #3c4b38;
+      max-width: 95%;
+      margin-bottom: 1.2rem;
+      font-weight: 300;
+      letter-spacing: 0.01em;
+    }
+
+    .terms-image {
+      background: #d4cdbb;
+      height: 220px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240"><rect width="400" height="240" fill="%23d4cdbb"/><path d="M30 200 L120 70 L190 140 L260 50 L330 120 L380 180 L350 200 L280 150 L210 190 L140 110 L70 180 L30 200" fill="%236f8c5d" opacity="0.3"/><circle cx="180" cy="80" r="28" fill="%234d6b4a" opacity="0.25"/><path d="M50 190 L120 140 L190 180 L260 130 L340 170 L380 190 L320 200 L240 170 L160 200 L80 180 L50 190" fill="%23a5b892" opacity="0.25"/><text x="80" y="160" font-family="serif" font-size="30" fill="%232e3b2a" opacity="0.6">⚖️</text></svg>');
+      background-size: cover;
+      background-position: center;
+      border-radius: 120px 20px 120px 20px;
+      box-shadow: 0 12px 30px rgba(50, 60, 40, 0.08);
+      min-height: 200px;
+    }
+
+    /* main terms content */
+    .terms-content {
+      background: #fcfaf7;
+      padding: 2.5rem 2.8rem;
+      border-radius: 60px 20px 60px 20px;
+      border: 1px solid #ece5d9;
+      margin: 2rem 0 3rem;
+      box-shadow: 0 6px 18px rgba(70, 80, 50, 0.03);
+    }
+
+    .terms-content h3 {
+      font-size: 1.8rem;
+      font-weight: 400;
+      margin: 2rem 0 0.8rem 0;
+      color: #1d321a;
+      border-left: 5px solid #809b6e;
+      padding-left: 1.2rem;
+    }
+
+    .terms-content h3:first-of-type {
+      margin-top: 0.4rem;
+    }
+
+    .terms-content p {
+      color: #3f523b;
+      margin-bottom: 1rem;
+      font-size: 1.05rem;
+    }
+
+    .terms-content ul, .terms-content ol {
+      margin: 0.6rem 0 1.2rem 2rem;
+      color: #3f523b;
+    }
+
+    .terms-content li {
+      margin-bottom: 0.3rem;
+    }
+
+    .highlight-box {
+      background: #f0ece3;
+      padding: 1.6rem 2rem;
+      border-radius: 40px 8px 40px 8px;
+      margin: 1.8rem 0 0.5rem;
+      border-left: 6px solid #6f8c5d;
+    }
+
+    .highlight-box p {
+      margin-bottom: 0.2rem;
+    }
+
+    /* newsletter & footer (same) */
+    .newsletter {
+      background: #e2dacb;
+      padding: 2.8rem 2.5rem;
+      border-radius: 40px 8px 40px 8px;
+      margin: 3.4rem 0 2rem;
+      text-align: center;
+    }
+
+    .newsletter h3 {
+      font-size: 2rem;
+      font-weight: 300;
+      letter-spacing: 0.04em;
+      color: #1e321b;
+    }
+
+    .newsletter input {
+      background: #fcfaf7;
+      border: 1px solid #b8ab94;
+      padding: 0.8rem 1.6rem;
+      width: 280px;
+      border-radius: 60px;
+      font-size: 1rem;
+      margin: 0.8rem 0.5rem 0 0;
+    }
+
+    .newsletter button {
+      background: #3f5e39;
+      border: none;
+      padding: 0.8rem 2rem;
+      border-radius: 60px;
+      color: #f4f0e7;
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .newsletter button:hover {
+      background: #1f3a1b;
+    }
+
+    footer {
+      border-top: 2px solid #d8d0c0;
+      padding: 2rem 0 1.5rem;
+      margin-top: 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      color: #4d5f45;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 300;
+      letter-spacing: 0.03em;
+      border-left: 6px solid #809b6e;
+      padding-left: 1.2rem;
+      margin: 2.8rem 0 1.8rem;
+      color: #2f462a;
+    }
+
+    @media (max-width: 780px) {
+      .terms-hero { grid-template-columns: 1fr; }
+      .nav-links { gap: 1.2rem; flex-wrap: wrap; }
+      .terms-content { padding: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- header (exact replica) -->
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-icon">🌿</span>
+      <h1>Zenthoria<span>Fern World</span></h1>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="terms.html" style="border-bottom-color: #6f8c5d;">Terms Of Privacy</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="cookies.html">Cookies Policy</a>
+    </div>
+  </header>
+
+  <!-- terms hero -->
+  <section class="terms-hero">
+    <div class="terms-text">
+      <h2>Our <strong>Terms of Service</strong> · clarity & trust</h2>
+      <p>By using Zenthoria Fern World, you agree to the following terms. We keep them straightforward, fair, and rooted in respect for our community and the natural world.</p>
+      <p>Last updated: July 1, 2026</p>
+    </div>
+    <div class="terms-image" aria-label="fern and scales illustration"></div>
+  </section>
+
+  <!-- main terms content -->
+  <div class="terms-content">
+    <h3>1. Acceptance of Terms</h3>
+    <p>By accessing or using the Zenthoria Fern World website (the “Site”), you agree to comply with and be bound by these Terms of Service. If you do not agree to these terms, please do not use the Site. We reserve the right to update or modify these terms at any time without prior notice. Your continued use of the Site after any changes constitutes acceptance of the new terms.</p>
+
+    <h3>2. Use of Content</h3>
+    <p>All content on this Site — including articles, guides, images, illustrations, and databases — is for informational and educational purposes only. You may not reproduce, distribute, or commercially exploit any content without prior written permission from Zenthoria Fern World. Personal, non-commercial use is permitted, provided you retain all copyright and other proprietary notices.</p>
+    <ul>
+      <li><strong>Attribution:</strong> If you share our content, please credit Zenthoria Fern World and link back to the original page.</li>
+      <li><strong>Prohibited uses:</strong> You may not use our content for misleading, unlawful, or harmful purposes.</li>
+    </ul>
+
+    <h3>3. User Contributions</h3>
+    <p>We welcome comments, questions, and community contributions. By submitting any content (e.g., comments, photos, cultivation tips) to the Site, you grant Zenthoria Fern World a non-exclusive, royalty-free, perpetual license to use, modify, and display that content in connection with the Site. You retain ownership of your original work, but you are responsible for ensuring that your contributions do not infringe on third-party rights.</p>
+
+    <h3>4. Disclaimer of Warranties</h3>
+    <p>The information provided on Zenthoria Fern World is for general informational purposes only. While we strive to keep the information accurate and up-to-date, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability of the Site or the information contained therein. Your use of the Site is at your own risk.</p>
+
+    <h3>5. Limitation of Liability</h3>
+    <p>To the fullest extent permitted by law, Zenthoria Fern World and its founders, contributors, and partners shall not be liable for any direct, indirect, incidental, consequential, or punitive damages arising out of your use of the Site or any content provided. This includes, but is not limited to, loss of data, loss of profits, or personal injury.</p>
+
+    <h3>6. External Links</h3>
+    <p>The Site may contain links to external websites that are not operated by Zenthoria Fern World. We have no control over the content or practices of these sites and assume no responsibility for them. We encourage you to review the privacy policies and terms of any third-party sites you visit.</p>
+
+    <h3>7. Intellectual Property</h3>
+    <p>All trademarks, logos, and service marks displayed on the Site are the property of Zenthoria Fern World or their respective owners. You may not use any of these without prior written consent.</p>
+
+    <h3>8. Governing Law</h3>
+    <p>These Terms of Service are governed by and construed in accordance with the laws of the state of Oregon, without regard to its conflict of law principles. Any disputes arising under or in connection with these terms shall be subject to the exclusive jurisdiction of the courts located in Multnomah County, Oregon.</p>
+
+    <div class="highlight-box">
+      <p><strong>🌿 Our commitment:</strong> We believe in transparency and fairness. If you have any questions about these terms, please <a href="contact.html" style="color: #2f5a26; text-decoration: underline;">contact us</a> — we’re here to help.</p>
+    </div>
+  </div>
+
+  <!-- newsletter (identical) -->
+  <div class="newsletter">
+    <h3>🌿 The Frond Letter</h3>
+    <p style="max-width: 500px; margin: 0.5rem auto 1rem; color: #3c5036;">Weekly insights, rare species spotlights, and advanced cultivation techniques.</p>
+    <form><input type="email" placeholder="your@email.com" aria-label="email"><button>Subscribe</button></form>
+  </div>
+
+  <!-- footer -->
+  <footer>
+    <span>© Zenthoria Fern World · established 2018</span>
+    <span style="letter-spacing: 0.1em;">🌿 authority in fern horticulture</span>
+  </footer>
+
+</div>
+</body>
+</html>
